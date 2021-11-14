@@ -1,0 +1,11 @@
+for (float i = 0; i < n; i++){
+  float r = c * sqrt(i);
+  x = r * cos(sqrt((72*PI*i)/1200));
+  y = r * sin(sqrt((72*PI*i)/1200)); 
+  
+  a = r * sin(sqrt((35*PI*i)/1200)); 
+  
+  
+  ellipse(x,a, random(3), random(3));
+  
+  
