@@ -10,7 +10,7 @@ for (float i = 0; i < n; i++){
   
   ellipse(x,a, random(3), random(3));
   
-  //Segunda
+  //Segunda...............
 
 void setup(){
   background(255);
@@ -34,3 +34,19 @@ for (float i = 0; i < n; i++){
   
   a = r * cos(sqrt((8*PI*i)/1200)); 
   
+
+//3ra -----------------------------------
+for (float i = 0; i < n; i++){
+  float r = c * sqrt(i);
+  x = r * cos(sqrt((72*PI*i)/1200));
+  y = r * sin(sqrt((72*PI*i)/1200)); 
+  
+  a = r * tan(sqrt((100*PI*i)/1200)); 
+  
+  
+  ellipse(x,a, random(3), random(3));
+  //square(a,b, 5);
+ 
+ 
+
+
