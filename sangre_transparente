@@ -42,3 +42,19 @@ for (float i = 0; i < n; i++){
 
 
 }
+
+ rotateX(frameCount*PI); 
+ rotateY(frameCount*PI);
+ x = r * cos(sqrt((PI*i)/1200));
+ y = r * sin(sqrt((TAU*i)/120)); 
+ 
+ 
+ 
+ 
+  rotateY(frameCount*PI);
+  rotateZ(frameCount);
+  x = r * sin(sqrt((PI*i)/1200));
+  y = r * cos(sqrt((PI*i)/120)); 
+
+
+
