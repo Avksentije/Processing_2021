@@ -55,6 +55,16 @@ for (float i = 0; i < n; i++){
   rotateZ(frameCount);
   x = r * sin(sqrt((PI*i)/1200));
   y = r * cos(sqrt((PI*i)/120)); 
+  
+  
+   fill(245,245,0,10);
+   rotateX(frameCount*17); 
+   rotateY(frameCount*317);
+   rotateZ(frameCount);
+   x = r * sin(sqrt(PI*i)/1200);
+   y = r * sin(sqrt((1444*PI)/1200)); 
+   ellipse(x,y, random(3), random(100));
+   
 
 
 
