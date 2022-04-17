@@ -1,0 +1,67 @@
+Flor flor1;
+Flor flor2;
+
+
+void setup() {
+  size(1200, 1200, P3D);
+  flor1 = new Flor(width/2, height/2);
+  flor2 = new Flor(width/2, height/3);
+  background(0);
+  noStroke();
+  ellipseMode(CENTER);
+  frameRate(60);
+}
+
+void draw() {
+  flor1.appear();
+  //flor2.appear();
+  
+  flor1.move(mouseX, mouseY);
+}
+
+class Flor {
+
+  int n = 100;
+  int c = 7;
+
+  float x;
+  float y;
+
+  int posX, posY;
+
+  Flor(int _posX, int _posY) {
+    posX = _posX;
+    posY = _posY;
+  }
+
+  void appear() {
+    push();
+    translate(posX, posY);
+    fill(245, 245, 0, 100);
+    rotateX(frameCount*17); //gira alrededor de eje Y rotateY
+    rotateY(frameCount*317);
+    rotateZ(frameCount);
+    for (float i = 0; i < n; i++) {
+      float r = c * sqrt(i);
+      x = r * sin(sqrt((PI*i)/1200));
+      y = r * sin(sqrt((1444*PI)/1200)); 
+
+      ellipse(x, y, random(3), random(100));
+    }
+    pop();
+  }
+  
+  void move(int _x, int _y){
+    posX = _x;
+    posY = _y;
+    
+  }
+}
+
+
+void mouseReleased() {
+  saveFrame("bw#####.png");
+
+
+  //saveFrame("espiral/espi#####.png");
+}
